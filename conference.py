@@ -607,7 +607,7 @@ class ConferenceApi(remote.Service):
         del data['websafeKey']
 
 
-        # create Session & return request
+        # create Session & return SessionForm
         session_key = Session(**data).put()
         return self._copySessionToForm(session_key.get())
 
